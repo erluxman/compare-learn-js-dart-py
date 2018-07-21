@@ -1,5 +1,17 @@
-function sayMyName(name){
-    console.log("Hey "+name)
+sayMyNameJS("Laxman");
+console.log(giveMyNameJS());
+console.log(giveMyProfileJS().name + "  " + giveMyProfileJS().age);
+
+
+//Functions
+function sayMyNameJS(name) {
+  console.log("Hey " + name);
 }
 
-sayMyName("Laxman")
+function giveMyNameJS() {
+  return "Laxman";
+}
+
+function giveMyProfileJS() {
+  return { name: "Laxman", age: 25 };
+}
