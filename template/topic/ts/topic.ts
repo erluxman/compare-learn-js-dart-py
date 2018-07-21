@@ -1,0 +1,1 @@
+console.log("!! TS : Hello World !!")
