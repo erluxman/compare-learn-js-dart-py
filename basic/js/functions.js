@@ -3,7 +3,7 @@ console.log(giveMyNameJS());
 console.log(giveMyProfileJS().name + "  " + giveMyProfileJS().age);
 
 
-//Functions
+//Functions -> Can be defined below the invocation
 function sayMyNameJS(name) {
   console.log("Hey " + name);
 }

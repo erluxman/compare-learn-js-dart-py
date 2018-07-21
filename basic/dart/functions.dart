@@ -5,7 +5,7 @@ void main() {
 }
 
 
-//functions
+//Functions -> Can be defined below the invocation
 void sayMyNameDart(String name) {
   print("Hey " + name);
 }
