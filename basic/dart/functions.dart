@@ -8,6 +8,9 @@ void main() {
   var myName = giveMyNameDart();
   myName = 6; 
   */
+
+  var person = PersonDart("Laxman");
+  print(person.greeting());
 }
 
 //Functions -> Can be defined below the invocation
@@ -27,4 +30,13 @@ class Profile {
   Profile(this.name, this.age);
   String name;
   int age;
+}
+
+class PersonDart {
+  PersonDart(this.name);
+  String name;
+  String greeting() {
+    print("Hi! I'm " + this.name + ".");
+    return "Greeted " + this.name + " Successfully";
+  }
 }

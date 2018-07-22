@@ -9,8 +9,21 @@ print(myName);
 */
 print(giveMyProfileTS().name + "  " + giveMyProfileTS().age);
 
-//Functions -> Can be defined below the invocation
+class PersonTS {
+  name: string;
+  greeting = function() {
+    print("Hi! I'm " + this.name + ".");
+    return "Greeted " + this.name + " Successfully";
+  };
+  constructor(name: string) {
+    this.name = name;
+  }
+}
 
+let userTS = new PersonTS("Laxman");
+print(userTS.greeting());
+
+//Functions -> Can be defined below the invocation
 function sayMyNameTS(name: String) {
   print("Hey " + name);
 }

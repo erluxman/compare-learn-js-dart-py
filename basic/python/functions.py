@@ -30,6 +30,15 @@ class Profile:
         self.age = age
 
 
+class PersonPy:
+    def __init__(self, name):
+        self.name = name
+
+    def greeting(self):
+        print("Hi ! I'm "+self.name + ".")
+        return "Greeted " + self.name + " Successfully"
+
+
 sayMyNamePy("Laxman")
 print(giveMyNamePy())
 print(giveMyProfilePy().name + "  "+str(giveMyProfilePy().age))
@@ -38,3 +47,5 @@ print("From two values function : "+name + "  "+str(age))
 myName = giveMyNamePy()
 myName = 6
 print(myName)
+person = PersonPy("Laxman")
+print(person.greeting())
