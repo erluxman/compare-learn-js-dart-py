@@ -2,8 +2,13 @@ void main() {
   sayMyNameDart("Laxman");
   print(giveMyNameDart());
   print(giveMyProfileDart().name + " " + giveMyProfileDart().age.toString());
-}
 
+  //Cannot do this in dart either
+  /* 
+  var myName = giveMyNameDart();
+  myName = 6; 
+  */
+}
 
 //Functions -> Can be defined below the invocation
 void sayMyNameDart(String name) {

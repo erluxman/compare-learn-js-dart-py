@@ -1,21 +1,28 @@
-
 sayMyNameTS("Laxman");
-console.log(giveMyNameTS());
-console.log(giveMyProfileTS().name + "  " + giveMyProfileTS().age);
+print(giveMyNameTS());
 
-
+// We cannot do this in typescript
+/*
+var myName = giveMyNameTS();
+myName = 6;
+print(myName);
+*/
+print(giveMyProfileTS().name + "  " + giveMyProfileTS().age);
 
 //Functions -> Can be defined below the invocation
 
 function sayMyNameTS(name: String) {
-    console.log("Hey " + name);
-  }
-  
-  function giveMyNameTS() {
-    return "Laxman";
-  }
-  
-  function giveMyProfileTS()  {
-    return { name: "Laxman", age: 25 };
-  }
-  
+  print("Hey " + name);
+}
+
+function print(variable: Any) {
+  console.log(variable);
+}
+
+function giveMyNameTS() {
+  return "Laxman";
+}
+
+function giveMyProfileTS() {
+  return { name: "Laxman", age: 25 };
+}

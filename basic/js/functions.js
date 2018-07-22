@@ -1,11 +1,17 @@
 sayMyNameJS("Laxman");
-console.log(giveMyNameJS());
-console.log(giveMyProfileJS().name + "  " + giveMyProfileJS().age);
-
+print(giveMyNameJS());
+print(giveMyProfileJS().name + "  " + giveMyProfileJS().age);
+var myName = giveMyNameJS();
+myName =  6;
+print(myName)
 
 //Functions -> Can be defined below the invocation
 function sayMyNameJS(name) {
-  console.log("Hey " + name);
+  print("Hey " + name);
+}
+
+function print(variable){
+  console.log(variable)
 }
 
 function giveMyNameJS() {
