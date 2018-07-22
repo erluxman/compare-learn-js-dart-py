@@ -15,7 +15,7 @@ function sayMyNameTS(name: String) {
   print("Hey " + name);
 }
 
-function print(variable: Any) {
+function print(variable: Object) {
   console.log(variable);
 }
 
