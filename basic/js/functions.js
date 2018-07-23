@@ -24,6 +24,7 @@ function print(variable) {
   console.log(variable);
 }
 
+//function giveMyNameJS() => "Laxman"  -> This type of definition does not work
 function giveMyNameJS() {
   return "Laxman";
 }

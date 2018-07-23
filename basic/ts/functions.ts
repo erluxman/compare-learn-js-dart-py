@@ -23,19 +23,33 @@ class PersonTS {
 let userTS = new PersonTS("Laxman");
 print(userTS.greeting());
 
-//Functions -> Can be defined below the invocation
+//var number :Number = giveMyStringObjectTS()    => Cannot do this
+var string :String = giveMyStringObjectTS()
+print(string)
+
+
+//Functions -> Can be defined below the invocation but classes cannot be
 function sayMyNameTS(name: String) {
   print("Hey " + name);
 }
+
 
 function print(variable: Object) {
   console.log(variable);
 }
 
-function giveMyNameTS() {
+//function giveMyNameTS() => "Laxman";  -> This kind of definition does not work
+
+ function giveMyNameTS() {
   return "Laxman";
-}
+} 
+
 
 function giveMyProfileTS() {
   return { name: "Laxman", age: 25 };
+}
+
+function giveMyStringObjectTS():String{
+  return "String type -> Laxman"
+  //return 5   ->   Does not work .
 }

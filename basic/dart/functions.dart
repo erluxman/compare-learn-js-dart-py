@@ -9,21 +9,40 @@ void main() {
   myName = 6; 
   */
 
-  var person = PersonDart("Laxman");
+  PersonDart person = PersonDart("Laxman");
   print(person.greeting());
+
+  //int integer = giveMyStringObjectTS() => Cannot do this
+  var string = giveMyStringObjectTS();
+  //string = 4; cannot do this
+  print(string);
+  print(checkArgumentType("Hey"));
+  print(checkArgumentType(5));
+  print(checkArgumentType(PersonDart("Laxman")));
+
 }
 
 //Functions -> Can be defined below the invocation
-void sayMyNameDart(String name) {
-  print("Hey " + name);
-}
+sayMyNameDart(String name) => print("Hey " + name);
 
-String giveMyNameDart() {
+giveMyNameDart() {
   return "Laxman";
 }
 
-Profile giveMyProfileDart() {
+String giveMyStringObjectTS() => "String type -> Laxman";
+
+giveMyProfileDart() {
   return Profile("Laxman", 25);
+}
+
+checkArgumentType(arg) {
+  if (arg is String) {
+    return arg.toString() + " is String";
+  } else if (arg is int) {
+    return arg.toString() + " is int";
+  } else if (arg is PersonDart) {
+    return arg.toString() + " is person";
+  }
 }
 
 class Profile {
