@@ -19,6 +19,9 @@ void main() {
   print(checkArgumentType("Hey"));
   print(checkArgumentType(5));
   print(checkArgumentType(PersonDart("Laxman")));
+
+  var abc = functionReturningFunctionDart();
+  print(abc());
 }
 
 //Functions -> Can be defined below the invocation
@@ -42,7 +45,7 @@ checkArgumentType(arg) {
   } else if (arg is PersonDart) {
     return arg.toString() + " is person";
   }
-} 
+}
 
 class Profile {
   Profile(this.name, this.age);
@@ -57,4 +60,19 @@ class PersonDart {
     print("Hi! I'm " + this.name + ".");
     return "Greeted " + this.name + " Successfully";
   }
+}
+
+String Function() lambdaReturningFunctionDart() {
+  return () {
+    //Returning lambda.
+    return "From lambda inside function";
+  };
+}
+
+functionReturningFunctionDart() {
+  functionReturnedByFunctionDart() {
+    return "From function inside function dart";
+  }
+
+  return functionReturnedByFunctionDart;
 }
