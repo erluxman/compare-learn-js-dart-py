@@ -4,6 +4,8 @@ print(giveMyProfileJS().name + "  " + giveMyProfileJS().age);
 var myName = giveMyNameJS();
 myName = 6;
 print(myName);
+var g = functionReturningFunctionJS();
+print("Function Returning function  "+g());
 
 function PersonJS(name) {
   this.name = name;
@@ -12,7 +14,7 @@ function PersonJS(name) {
     return "Greeted " + this.name + " Successfully";
   };
 }
-let userJS = new PersonJS("Laxman");
+let userJS = new PersonJS("Laxman"); //OMG this freaking new keyword is must to create object
 print(userJS.greeting());
 
 //Functions -> Can be defined below the invocation
@@ -32,3 +34,10 @@ function giveMyNameJS() {
 function giveMyProfileJS() {
   return { name: "Laxman", age: 25 };
 }
+
+function functionReturningFunctionJS() {
+  return function functionReturnedByFunctionJS() {
+      return "This is function returned by function";
+  }
+}
+

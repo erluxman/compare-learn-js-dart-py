@@ -39,6 +39,12 @@ class PersonPy:
         return "Greeted " + self.name + " Successfully"
 
 
+def functionReturningFunctionPy():
+    def functionReturnedByFunctionPy():
+        return "This is function returned by function."
+    return functionReturnedByFunctionPy
+
+
 sayMyNamePy("Laxman")
 print(giveMyNamePy())
 print(giveMyProfilePy().name + "  "+str(giveMyProfilePy().age))
@@ -49,3 +55,6 @@ myName = 6
 print(myName)
 person = PersonPy("Laxman")
 print(person.greeting())
+g = functionReturningFunctionPy()
+print(g())
+

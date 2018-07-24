@@ -8,7 +8,8 @@ myName = 6;
 print(myName);
 */
 print(giveMyProfileTS().name + "  " + giveMyProfileTS().age);
-
+var g = functionReturningFunctionTS();
+print("Function Returning function  "+g());
 class PersonTS {
   name: string;
   greeting = function() {
@@ -52,4 +53,12 @@ function giveMyProfileTS() {
 function giveMyStringObjectTS():String{
   return "String type -> Laxman"
   //return 5   ->   Does not work .
+}
+
+
+//Function returning function
+function functionReturningFunctionTS() {
+  return function functionReturnedByFunctionTS() {
+      return "This is function returned by function.";
+  }
 }

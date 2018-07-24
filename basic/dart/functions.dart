@@ -19,7 +19,6 @@ void main() {
   print(checkArgumentType("Hey"));
   print(checkArgumentType(5));
   print(checkArgumentType(PersonDart("Laxman")));
-
 }
 
 //Functions -> Can be defined below the invocation
@@ -43,7 +42,7 @@ checkArgumentType(arg) {
   } else if (arg is PersonDart) {
     return arg.toString() + " is person";
   }
-}
+} 
 
 class Profile {
   Profile(this.name, this.age);
