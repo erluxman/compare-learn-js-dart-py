@@ -22,6 +22,7 @@ void main() {
 
   var abc = functionReturningFunctionDart();
   print(abc());
+  print(add(5)(4));
 }
 
 //Functions -> Can be defined below the invocation
@@ -75,4 +76,12 @@ functionReturningFunctionDart() {
   }
 
   return functionReturnedByFunctionDart;
+}
+
+add(int a) {
+  int innerFunction(b) {
+    return a + b;
+  }
+
+  return innerFunction;
 }
