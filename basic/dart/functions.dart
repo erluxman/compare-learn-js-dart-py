@@ -2,15 +2,9 @@ void main() {
   sayMyNameDart("Laxman");
   print(giveMyNameDart());
   print(giveMyProfileDart().name + " " + giveMyProfileDart().age.toString());
-
-  //Cannot do this in dart either
-  /* 
-  var myName = giveMyNameDart();
-  myName = 6; 
-  */
-
   PersonDart person = PersonDart("Laxman");
   print(person.greeting());
+  person.foreachAndLymbda();
 
   //int integer = giveMyStringObjectTS() => Cannot do this
   var string = giveMyStringObjectTS();
@@ -57,9 +51,14 @@ class Profile {
 class PersonDart {
   PersonDart(this.name);
   String name;
+  List<String> names = ["hello", "world"];
   String greeting() {
     print("Hi! I'm " + this.name + ".");
     return "Greeted " + this.name + " Successfully";
+  }
+
+  foreachAndLymbda() {
+    names.where((name) => name.length > 1).forEach((name) => print(name));
   }
 }
 
